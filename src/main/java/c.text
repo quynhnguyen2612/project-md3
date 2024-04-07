@@ -1,0 +1,12 @@
+<c:forEach items="${staffs}" var="staff">
+                    <tr>
+                        <td>${staff.name}</td>
+                        <td>${staff.email}</td>
+                        <td>${staff.address}</td>
+                        <td>${staff.phone}</td>
+                        <td>${staff.salary}</td>
+                        <td>${staff.department.name}</td>
+                        <td><a href="http://localhost:8080/staffs?action=edit" class="btn btn-outline-warning">edit</a></td>
+                        <td><a href="http://localhost:8080/staffs?action=delete&id=${staff.id}" class="btn btn-outline-danger" >delete</a></td>
+                    </tr>
+                </c:forEach>
